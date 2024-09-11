@@ -1,0 +1,97 @@
+/* footer.css */
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
+.footer {
+  background-color: #3d0505;
+  color: #fff;
+  padding: 50px 0;
+  margin-top: 20px;
+  font-family: "Baskervville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px;
+}
+
+.footer-section {
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: yellow;
+}
+
+.footer-bottom {
+  background-color: #780a0a;
+  padding: 10px 0;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: yellow;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+.footer p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: white;
+}
+.footer h3{
+  color: yellow
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer-section h3 {
+    font-size: 1.2rem; /* Decrease font size for smaller screens */
+  }
+
+  .social-icons a {
+    font-size: 1.2rem; /* Decrease social icon size for smaller screens */
+  }
+}

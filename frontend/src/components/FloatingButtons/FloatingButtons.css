@@ -1,0 +1,78 @@
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 2;
+}
+
+.call-button {
+    left: -2px;
+    background-color: #2c64ad;
+    border-radius: 0px 10px 10px 0px;
+
+    top: 43.6%;
+}
+
+.call-button:hover {
+    background-color: #34608a;
+}
+
+.whatsapp-button {
+    left: -1px;
+    background-color: #25D366;
+    border-radius: 0px 10px 10px 0px;
+    top: 38%;
+}
+
+.whatsapp-button:hover {
+    background-color: #1DA851;
+
+}
+
+.instagram-button {
+    left: -1px;
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+    border-radius: 0px 10px 10px 0px;
+    top: 32.4%;
+}
+
+.instagram-button:hover {
+    background-color: rgba(0, 0, 0, 0.199);
+}
+
+@media screen and (max-width: 768px) {
+    .floating-button {
+        height: 40px;
+        width: 40px;
+    }
+
+    .instagram-button {
+        top: 31.6%;
+    }
+
+    .call-button {
+        top: 44.2%;
+    }
+}
+
+
+/* .instagram{ width:100px; height:100px;
+    background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    } */

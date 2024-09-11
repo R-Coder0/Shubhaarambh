@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
+.gallery-hero {
+  background: url('../../assets/Gallery/GalleryHero.webp') no-repeat center center/cover;
+  height: 526px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-attachment: fixed;
+}
+
+.gallery-hero-content h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.gallery-hero-content p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.gallery-caption {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px 50px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-top: -20px;
+  font-family: "Baskervville", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.gallery-section {
+  margin: 20px;
+  text-align: center;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 6px;
+}
+
+.image-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-card:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.gallery-modal-content {
+  position: relative;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gallery-modal-close-btn {
+  position: absolute;
+  top: 10px; /* Position from the top of the modal */
+  right: 10px; /* Position from the right of the modal */
+  cursor: pointer;
+  font-size: 24px; /* Size of the close button */
+  color: #Fff; /* Color of the close button */
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.gallery-modal-nav-btn {
+  position: absolute;
+  top: 50%; /* Center vertically in relation to the modal */
+  transform: translateY(-50%); /* Offset the button by half its height to truly center it */
+  font-size: 24px; /* Size of the icons */
+  color: #fff; /* Color of the icons */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px; /* Add some padding for easier clicking */
+}
+
+.gallery-modal-nav-btn-prevbtn {
+  position: absolute;
+  left: 0; /* Aligns the button to the far left of the modal */
+  top: 50%; /* Centers vertically */
+  transform: translateY(-50%);
+  font-size: 24px; /* Size of the icons */
+  color: #fff; /* Color of the icons */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px; /* Adjusts the position to truly center vertically */
+}
+
+.gallery-modal-nav-btn-nextbtn {
+  position: absolute;
+  right: 0; /* Aligns the button to the far right of the modal */
+  top: 50%; /* Centers vertically */
+  transform: translateY(-50%);
+  font-size: 24px; /* Size of the icons */
+  color: #fff; /* Color of the icons */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px; /* Adjusts the position to truly center vertically */
+}
+
+.gallery-modal-image {
+  max-width: 90%; /* Adjust based on your needs */
+  max-height: 80vh;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .gallery-modal-content {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .gallery-modal-nav-btn-prevbtn {
+    font-size: 20px;
+    left: -8px;
+  }
+  .gallery-modal-nav-btn-nextbtn {
+    font-size: 20px;
+    right: -8px;
+  }
+
+  .gallery-modal-close-btn {
+    font-size: 20px;
+    top: -2px;
+    right: -2px;
+  }
+}

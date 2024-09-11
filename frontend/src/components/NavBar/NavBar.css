@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
+
+.navbar {
+  background-color: #780a0a;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  margin-left: 20px;
+}
+
+.navbar-logo-text {
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: "Great Vibes", cursive;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-transform: capitalize;
+}
+
+.navbar-toggle {
+  display: none; /* Hidden on desktop */
+  cursor: pointer;
+  padding: 10px;
+  z-index: 0;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 4px 0;
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex; /* Default display for desktop */
+  gap: 1rem; /* Spacing between links */
+  align-items: center;
+  margin-right: 65px;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+.nav-link {
+  color: yellow;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  font-family: "Baskervville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.menu-header, .close-icon {
+  display: none; /* Hide by default */
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    display: none; /* Initially hide for mobile */
+    flex-direction: column;
+    position: fixed;
+    top: -16px;
+    right: -66px;
+    height: 100%;
+    width: 270px;
+    background-color: #fff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    padding-left: 0; /* Remove any padding to align items to the left */
+  }
+
+  .navbar-nav.open {
+    display: flex; /* Show menu when open */
+    transform: translateX(0);
+  }
+
+  .menu-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f3e81b; /* Dark background for the header */
+    color: black;
+    padding: 12px 0px;
+    font-size: 1.5rem;
+    width: 100%;
+    font-weight: 800;
+  }
+  .navbar-brand .navbar-logo-text {
+    font-size: 2rem;
+}
+  .nav-item {
+    padding: 5px 15px; /* Adjust padding to ensure alignment */
+    width: 100%; /* Ensure full width for alignment */
+    text-align: left; /* Align text to the left */
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 400;
+    display: block; /* Make links fill the nav-item for better tap targets */
+    padding-left: 2rem;
+  }
+
+  .close-icon {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    top: 0px;
+    right: 14rem;
+    color: #000;
+  }
+
+  .overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .overlay.open {
+    display: block;
+  }
+
+  .navbar-toggle {
+    display: block; /* Show toggle button for mobile */
+  }
+
+  .navbar-brand .navbar-logo-text {
+    font-size: 1.5rem;
+  }
+}

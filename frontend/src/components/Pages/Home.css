@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Great+Vibes&family=Noto+Sans+HK:wght@100..900&display=swap');
+
+/* Service Section */
+.services {
+  padding: 60px 0;
+  background-color: #f2f0f1; /* A soft background color that matches elegant themes */
+  text-align: center;
+}
+
+.services h2 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #333; /* A warm, inviting color that complements festive occasions */
+  font-family: 'Playfair Display', serif; /* Elegant, decorative font for headings */
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Ensures even spacing around all sides */
+}
+
+.service {
+  flex: 1 1 300px;
+  margin: 15px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(50, 50, 50, 0.1);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(50, 50, 50, 0.2);
+}
+
+.service h3 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #000; /* Dark color for contrast and readability */
+}
+
+.service p {
+  color: #555; /* Soft color for text */
+  font-size: 1.2rem;
+}
+
+.service-icon {
+  font-size: 3.5rem;
+  color: #780a0a; /* Matching the headings */
+  margin-bottom: 20px;
+}
+
+.service:hover .service-icon {
+  transform: scale(1.1); /* Gentle scaling effect instead of rotating */
+}
+
+/* About Us Section */
+.about-us {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.about-us h2 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #333; /* Darker color for better readability */
+  text-align: left;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centering the content */
+  flex-wrap: wrap-reverse;
+  gap: 20px; /* Adding space between items */
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+  max-width: 600px; /* Limiting text width for better readability */
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+
+.about-video {
+  width: 50%;
+  height: 542px; /* Adjust height based on the aspect ratio */
+  flex: 1;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+
+}
+.fairy-tale-strip {
+  background-color: #780a0a;
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: -1px;
+  height: 73px;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text, .about-video {
+    flex: none;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .about-us h2{
+    text-align: center;
+  }
+
+  .about-video iframe {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+}
+
+/* Call to Action (CTA) Section */
+.call-to-action {
+  padding: 60px 20px;
+  background-color: #780a0a;
+  color: #333;
+  text-align: center;
+}
+
+.call-to-action h2 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.call-to-action button {
+  padding: 15px 30px;
+  background-color: #d1c7c7;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.call-to-action button:hover {
+  background-color: #470808;
+  transform: scale(1.05);
+  color: white;
+}
+/* Blog Preview Section */
+/* Blog Preview Section */
+.blog-preview {
+  padding: 80px 20px;
+  background-color: #f5f5f5; /* Lighter background for a subtle look */
+  text-align: center;
+}
+
+.blog-preview h2 {
+  margin-bottom: 50px;
+  font-size: 2.8rem;
+  color: #333; /* Brand color for headers */
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 30px; /* Increased gap for better spacing */
+}
+
+.blog-post {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.5s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.image-card {
+  width: 100%;
+  height: 250px; /* Increased height for better visual impact */
+  overflow: hidden;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-card:hover img {
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+.description-card {
+  padding: 20px;
+  background-color: #ffffff;
+  text-align: left;
+  border-radius: 0 0 10px 10px; /* Consistent rounded corners */
+}
+
+.description-card h3 {
+  font-size: 1.8rem; /* Larger font size for emphasis */
+  color: #333;
+}
+
+.description-card p {
+  font-size: 1.3rem;
+  color: #666;
+  margin-top: 10px; /* Added margin for visual separation */
+}
+
+@media (max-width: 768px) {
+  .blog-container {
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
+  }
+
+  .blog-post {
+    margin-bottom: 20px;
+  }
+
+  .image-card img {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+  .fairy-tale-strip {
+    background-color: #780a0a;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: -1px;
+    height: 92px;
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+}
+
